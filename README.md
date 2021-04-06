@@ -3,7 +3,7 @@
  -Main code's app in folder: main/java/com.devlong.asigntaskapp/crawlapp 😁😁<br/>
  Have Fun !!!
 ## Capture
-- to see video capture app click link below:
+- to see video capture app click link below:<br/>
 https://user-images.githubusercontent.com/61280727/113743312-be7b3480-972d-11eb-81a8-ae11b157861f.mp4
 - some capture image: 
 ![2](https://user-images.githubusercontent.com/61280727/113742889-46147380-972d-11eb-8432-2e45089adf0f.jpg)
