@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:paddingVertical="30dp"
+            android:paddingHorizontal="20dp"
+            android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_cotich"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardCornerRadius="30dp"
+                card_view:cardElevation="10dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="4dp"
+                    android:gravity="center"
+                    android:background="@drawable/bg_gradient_blue"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Truyện Cổ tích"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:textSize="30dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Việt Nam"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:textSize="30dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+            android:id="@+id/cv_cuoi"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardCornerRadius="30dp"
+            card_view:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@drawable/bg_gradient_blue2"
+                android:orientation="horizontal"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Truyện Cười"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="30dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_dangian"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardCornerRadius="30dp"
+                card_view:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/bg_gradient_blue3"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Truyện dân gian"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:textSize="30dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_cotichTG"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardCornerRadius="30dp"
+                card_view:cardElevation="10dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="4dp"
+                    android:gravity="center"
+                    android:background="@drawable/bg_gradient_blue4"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Truyện Cổ tích"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:textSize="30dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Thế Giới"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:textSize="30dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</layout>

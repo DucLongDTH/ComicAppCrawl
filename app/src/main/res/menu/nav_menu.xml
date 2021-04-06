@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_itemHome"
+        android:icon="@drawable/outline_home_blue_600_36dp"
+        android:title="Trang Chủ"/>
+    <item android:title="Topic">
+        <menu>
+            <item android:id="@+id/menu_itemTopic1"
+                android:icon="@drawable/outline_book_blue_600_36dp"
+                android:title="Truyện Cổ Tích VN"/>
+            <item android:id="@+id/menu_itemTopic2"
+                android:icon="@drawable/outline_book_blue_600_36dp"
+                android:title="Truyện Cười"/>
+            <item android:id="@+id/menu_itemTopic3"
+                android:icon="@drawable/outline_book_blue_600_36dp"
+                android:title="Truyện Dân Gian"/>
+            <item android:id="@+id/menu_itemTopic4"
+                android:icon="@drawable/outline_book_blue_600_36dp"
+                android:title="Truyện Cổ Tích TG "/>
+        </menu>
+
+    </item>
+
+
+
+</menu>
