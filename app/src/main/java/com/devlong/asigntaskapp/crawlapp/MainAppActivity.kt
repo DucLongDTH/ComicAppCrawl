@@ -29,7 +29,7 @@ class MainAppActivity : AppCompatActivity(),View.OnClickListener,NavigationView.
     private val truyenCoTich = TruyenCoTichTopic("https://truyencotich.vn/truyen-co-tich/co-tich-viet-nam")
     private val truyenCoTichTG = TruyenCoTichTopic("https://truyencotich.vn/truyen-co-tich/co-tich-the-gioi")
     private val truyenDanGian = TruyenCoTichTopic("https://truyencotich.vn/truyen-dan-gian")
-
+    private var flagsHome = true
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this,R.layout.app_main)
@@ -42,7 +42,7 @@ class MainAppActivity : AppCompatActivity(),View.OnClickListener,NavigationView.
         toggle.syncState()
         navigationView.setNavigationItemSelectedListener(this)
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.fragment,HomeFragment(this@MainAppActivity))
+            add(R.id.fragment,HomeFragment(this@MainAppActivity))
             commit()
         }
         val headerView = navigationView.getHeaderView(0)
@@ -78,40 +78,50 @@ class MainAppActivity : AppCompatActivity(),View.OnClickListener,NavigationView.
             R.id.cv_cuoi,R.id.menu_itemTopic2 ->{
                 supportFragmentManager.beginTransaction()
                     .setCustomAnimations(R.anim.enter_page_rtl,R.anim.exit_page_rtl,R.anim.enter_page_ltr,R.anim.exit_page_ltr)
-                    .replace(R.id.fragment,truyenCuoi)
+                    .replace(R.id.fragment,truyenCuoi,"TOPIC2")
                     .addToBackStack(null)
                     .commit()
-
+                flagsHome = false
             }
             R.id.menu_itemTopic1,R.id.cv_cotich ->{
                 supportFragmentManager.beginTransaction()
                     .setCustomAnimations(R.anim.enter_page_rtl,R.anim.exit_page_rtl,R.anim.enter_page_ltr,R.anim.exit_page_ltr)
-                    .replace(R.id.fragment,truyenCoTich)
+                    .replace(R.id.fragment,truyenCoTich,"TOPIC1")
                     .addToBackStack(null)
                     .commit()
+                flagsHome = false
             }
             R.id.menu_itemHome ->{
-                supportFragmentManager.beginTransaction()
-                    .setCustomAnimations(R.anim.enter_page_rtl,R.anim.exit_page_rtl,R.anim.enter_page_ltr,R.anim.exit_page_ltr)
-                    .replace(R.id.fragment,homepage)
-                    .commit()
-
+//                val fr1 = supportFragmentManager.findFragmentByTag("TOPIC1")
+//                if (fr1 != null) supportFragmentManager.beginTransaction().hide(fr1)
+//                val fr2 = supportFragmentManager.findFragmentByTag("TOPIC2")!!
+//                if (fr2 != null) supportFragmentManager.beginTransaction().hide(fr2)
+//                val fr3 = supportFragmentManager.findFragmentByTag("TOPIC3")!!
+//                if (fr3 != null) supportFragmentManager.beginTransaction().hide(fr3)
+//                val fr4 = supportFragmentManager.findFragmentByTag("TOPIC4")!!
+//                if (fr4 != null) supportFragmentManager.beginTransaction().hide(fr4)
+                if(flagsHome == false){
+                    supportFragmentManager.beginTransaction()
+                        .setCustomAnimations(R.anim.enter_page_rtl,R.anim.exit_page_rtl,R.anim.enter_page_ltr,R.anim.exit_page_ltr)
+                        .replace(R.id.fragment,homepage,"HOME")
+                        .commit()
+                }
             }
             R.id.cv_dangian,R.id.menu_itemTopic3 ->{
                 supportFragmentManager.beginTransaction()
                     .setCustomAnimations(R.anim.enter_page_rtl,R.anim.exit_page_rtl,R.anim.enter_page_ltr,R.anim.exit_page_ltr)
-                    .replace(R.id.fragment,truyenDanGian)
+                    .replace(R.id.fragment,truyenDanGian,"TOPIC3")
                     .addToBackStack(null)
                     .commit()
-
+                flagsHome = false
             }
             R.id.cv_cotichTG,R.id.menu_itemTopic4 ->{
                 supportFragmentManager.beginTransaction()
                     .setCustomAnimations(R.anim.enter_page_rtl,R.anim.exit_page_rtl,R.anim.enter_page_ltr,R.anim.exit_page_ltr)
-                    .replace(R.id.fragment,truyenCoTichTG)
+                    .replace(R.id.fragment,truyenCoTichTG,"TOPIC4")
                     .addToBackStack(null)
                     .commit()
-
+                flagsHome = false
             }
         }
     }

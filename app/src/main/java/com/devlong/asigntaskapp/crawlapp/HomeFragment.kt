@@ -15,11 +15,16 @@ class HomeFragment : Fragment, View.OnClickListener {
     constructor(inter : IHomeFragment){
         this.inter = inter
     }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        // tao view
         binding = DataBindingUtil.inflate(inflater, R.layout.home_app, container, false)
         binding.cvCotich.setOnClickListener(this)
         binding.cvCuoi.setOnClickListener(this)
@@ -28,6 +33,21 @@ class HomeFragment : Fragment, View.OnClickListener {
         return binding.root
     }
 
+    override fun onResume() {
+        super.onResume()
+    }
+
+    override fun onPause() {
+        super.onPause()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+    }
     interface IHomeFragment{
         fun openTopic(itemId: Int)
     }
